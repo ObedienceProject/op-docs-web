@@ -1,0 +1,16 @@
+language: node_js
+
+jobs:
+  include:
+    stage: "Tests"
+    name: "Sample Test"
+    script: node --version
+
+    stage: "Install Dependencies"
+    install: npm install --no-optional
+    
+    stage: "Build"
+    script: npm run build
+    
+    stage: "Deploy to Web Server"
+    
